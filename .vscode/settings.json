@@ -1,0 +1,10 @@
+{
+    "editor.rulers": [
+        72,
+        79,
+        99
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": false,
+    
+}

@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}Django <code>AnonymousUser</code> Example{% endblock title %}
+
+{% block content %}
+
+    <h1>Django <code>AnonymousUser</code> Example</h1>
+
+    {% if user.is_authenticated %}
+        Greetings, {{ user.username | capfirst }}!
+    {% else %}
+        <p>You are not logged in, unfortunately. So you're an <code>AnonymousUser</code></p>
+        <a
+            href={% url 'login' %}
+            >
+            Login &nbsp&nbsp-&nbsp&nbsp {% url 'login' %} &nbsp&nbsp-&nbsp&nbsp <code>&#123% url 'login' %&#125</code>
+        </a>
+    {% endif %}
+
+    <h2>Navigation Links</h2>
+    <nav>
+        {% comment %} {  -  &#123 {% endcomment %}
+        {% comment %} }  -  &#125 {% endcomment %}
+        <a
+            href={% url 'home' %}
+            >
+            Home - <code>&#123% url 'home' %&#125</code>
+        </a>
+        <br>
+        <a
+            href={% url 'admin:index' %}
+            >
+            Django Admin Interface - <code>&#123% url 'admin:index' %&#125</code>
+        </a>
+        <br>
+        <a
+            href={% url 'django-admindocs-docroot' %}
+            >
+            Django Admin Documentation - <code>&#123% url 'django-admindocs-docroot' %&#125</code>
+        </a>
+        <br>
+        <a
+            href={% url 'admin:login' %}
+            >
+            Admin Login - <code>&#123% url 'admin:login' %&#125</code>
+        </a>
+        <br>
+        <a
+            href={% url 'admin:logout' %}
+            >
+            Admin Logout - <code>&#123% url 'admin:logout' %&#125</code>
+        </a>
+        <br>
+        <br>
+    </nav>
+
+    <h2>User Information</h2>
+    <dl>
+        <dt><code>user</code></dt>
+        <dd>{{ user }}</dd>
+        <dt><code>user.username</code></dt>
+        <dd>{{ user.username }}</dd>
+        <dt><code>user.is_authenticated</code></dt>
+        <dd>{{ user.is_authenticated }}</dd>
+        <dt><code>user.is_anonymous</code></dt>
+        <dd>{{ user.is_anonymous }}</dd>
+        <dt><code>user.is_authenticated</code></dt>
+        <dd>{{ user.is_authenticated }}</dd>
+        <dt><code>user.is_authenticated</code></dt>
+        <dd>{{ user.is_authenticated }}</dd>
+        <dt><code>user.is_authenticated</code></dt>
+        <dd>{{ user.is_authenticated }}</dd>
+        <dt><code>user.is_authenticated</code></dt>
+        <dd>{{ user.is_authenticated }}</dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+    
+{% endblock content %}
