@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <title>Django AnonymousUser - {% block title %}{% endblock title %}</title>
-    <style>
-        * {
-            font-size: 1.1rem;
-        }
-    </style>
 </head>
 <body>
 
@@ -18,20 +13,14 @@
 
     <h2>User Information</h2>
     <dl>
-        <dt><code>user</code></dt>
-        <dd>{{ user }}</dd>
         <dt><code>user.is_anonymous</code></dt>
         <dd>{{ user.is_anonymous }}</dd>
         <dt><code>user.is_authenticated</code></dt>
         <dd>{{ user.is_authenticated }}</dd>
-        <dt><code>user.is_superuser</code></dt>
-        <dd>{{ user.is_superuser }}</dd>
-        <dt><code>user.is_staff</code></dt>
-        <dd>{{ user.is_staff }}</dd>
+        <dt><code>user</code></dt>
+        <dd>{{ user }}</dd>
         <dt><code>user.username</code></dt>
         <dd>{{ user.username }}</dd>
-        <dt><code>user.email</code></dt>
-        <dd>{{ user.email }}</dd>
     </dl>
     
     {% block content %}
