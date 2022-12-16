@@ -6,29 +6,11 @@
 
     <h2><code>user</code> Login Status</h2>
     {% if user.is_authenticated %}
-        Greetings, {{ user.username | capfirst }}!
+        <p>You are logged in, and you're: <code>{{ user }}</code></p>
         <p><a href="{% url 'logout' %}">Log Out</a></p>
     {% else %}
-        <p>You are not logged in, unfortunately. So you're a <code>AnonymousUser</code></p>
+        <p>You are not logged in, so you're: <code>{{ user }}</code></p>
         <p><a href={% url 'login' %}>Log In</a></p>
     {% endif %}
 
-    <h2>User Information</h2>
-    <dl>
-        <dt><code>user</code></dt>
-        <dd>{{ user }}</dd>
-        <dt><code>user.username</code></dt>
-        <dd>{{ user.username }}</dd>
-        <dt><code>user.email</code></dt>
-        <dd>{{ user.email }}</dd>
-        <dt><code>user.is_authenticated</code></dt>
-        <dd>{{ user.is_authenticated }}</dd>
-        <dt><code>user.is_anonymous</code></dt>
-        <dd>{{ user.is_anonymous }}</dd>
-        <dt><code>user.is_superuser</code></dt>
-        <dd>{{ user.is_superuser }}</dd>
-        <dt><code>user.is_staff</code></dt>
-        <dd>{{ user.is_staff }}</dd>
-    </dl>
-    
 {% endblock content %}

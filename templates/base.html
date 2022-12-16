@@ -16,18 +16,24 @@
 
     <h1>Django <code>AnonymousUser</code> Example</h1>
 
-    <h2>Navigation Links</h2>
-    <nav>
-        <a href={% url 'admin:index' %}>Django Admin Interface</a>
-        <br>
-        <a href={% url 'django-admindocs-docroot' %}>Django Admin Documentation</a>
-        <br>
-        <a href={% url 'django-admindocs-models-index' %}>Django Admin Documentation - Models</a>
-        <br>
-        <a href="{% url 'django-admindocs-models-index' %}auth.user/">Django Admin Documentation - <code>auth.User</code></a>
-        <br>
-    </nav>
-
+    <h2>User Information</h2>
+    <dl>
+        <dt><code>user</code></dt>
+        <dd>{{ user }}</dd>
+        <dt><code>user.is_anonymous</code></dt>
+        <dd>{{ user.is_anonymous }}</dd>
+        <dt><code>user.is_authenticated</code></dt>
+        <dd>{{ user.is_authenticated }}</dd>
+        <dt><code>user.is_superuser</code></dt>
+        <dd>{{ user.is_superuser }}</dd>
+        <dt><code>user.is_staff</code></dt>
+        <dd>{{ user.is_staff }}</dd>
+        <dt><code>user.username</code></dt>
+        <dd>{{ user.username }}</dd>
+        <dt><code>user.email</code></dt>
+        <dd>{{ user.email }}</dd>
+    </dl>
+    
     {% block content %}
     {% endblock content %}
 
