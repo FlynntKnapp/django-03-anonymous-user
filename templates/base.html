@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <title>{% block title %}{% endblock title %}</title>
+    <title>Django AnonymousUser - {% block title %}{% endblock title %}</title>
     <style>
-        code {
-            font-size: 1.5rem;
+        * {
+            font-size: 1.1rem;
         }
     </style>
 </head>
 <body>
+
+    <h1>Django <code>AnonymousUser</code> Example</h1>
+
+    <h2>Navigation Links</h2>
+    <nav>
+        <p><a href={% url 'admin:index' %}>Django Admin Interface</a></p>
+        <p><a href={% url 'django-admindocs-docroot' %}>Django Admin Documentation</a></p>
+        <p><a href={% url 'django-admindocs-models-index' %}>Django Admin Documentation - Models</a></p>
+        <p><a href="{% url 'django-admindocs-models-index' %}auth.user/">Django Admin Documentation - <code>auth.User</code></a></p>
+    </nav>
 
     {% block content %}
     {% endblock content %}
