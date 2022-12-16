@@ -18,10 +18,14 @@
 
     <h2>Navigation Links</h2>
     <nav>
-        <p><a href={% url 'admin:index' %}>Django Admin Interface</a></p>
-        <p><a href={% url 'django-admindocs-docroot' %}>Django Admin Documentation</a></p>
-        <p><a href={% url 'django-admindocs-models-index' %}>Django Admin Documentation - Models</a></p>
-        <p><a href="{% url 'django-admindocs-models-index' %}auth.user/">Django Admin Documentation - <code>auth.User</code></a></p>
+        <a href={% url 'admin:index' %}>Django Admin Interface</a>
+        <br>
+        <a href={% url 'django-admindocs-docroot' %}>Django Admin Documentation</a>
+        <br>
+        <a href={% url 'django-admindocs-models-index' %}>Django Admin Documentation - Models</a>
+        <br>
+        <a href="{% url 'django-admindocs-models-index' %}auth.user/">Django Admin Documentation - <code>auth.User</code></a>
+        <br>
     </nav>
 
     {% block content %}
