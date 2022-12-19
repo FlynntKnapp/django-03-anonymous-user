@@ -128,7 +128,7 @@
     </head>
     <body>
 
-        <h1>Django <code>AnonymousUser</code> Example</h1>
+        <h1>Current <code>User</code>: <code>{{ user }}</code></h1>
 
         <h2>User Information</h2>
         <dl>
@@ -183,4 +183,4 @@
     LOGOUT_REDIRECT_URL = 'home'
     ```
 
-1. Proceed to []() to explore properties of the `AnonymousUser` object.
+1. Proceed to [Explore User Attributes and URL Routes](./03_explore_user_attributes_and_url_routes.md) to explore properties of the `AnonymousUser` object and investigate URL routes for actions.
