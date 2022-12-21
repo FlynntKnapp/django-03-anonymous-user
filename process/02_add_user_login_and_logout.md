@@ -53,7 +53,7 @@
     ]
     ```
 
-1. Add a `path()` which uses `TemplateView` so we can render a template like a homepage:
+1. Add a `path()` which uses `TemplateView` so we can render a template as a homepage:
     * The `TemplateView` class is a generic view that renders a template.
     * The `path()` function arguments will be:
         * route: `''`
