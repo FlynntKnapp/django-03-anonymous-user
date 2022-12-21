@@ -5,13 +5,13 @@
     * My sample directory:
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator> Get-Location
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> Get-Location
 
         Path
         ----
-        C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator
+        C:\Users\FlynntKnapp\Programming\django-anonymous-user
 
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator>
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
 
 1. Get contents of project root directory:
@@ -20,21 +20,21 @@
     * My sample directory contents:
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator> Get-ChildItem
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> Get-ChildItem
 
-            Directory: C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator
+            Directory: C:\Users\FlynntKnapp\Programming\django-anonymous-user
 
         Mode                 LastWriteTime         Length Name
         ----                 -------------         ------ ----
-        d----          12/20/2022  7:17 PM                config
+        d----          12/21/2022  6:56 AM                config
         -a---          12/18/2022 10:22 AM           7771 .gitignore
-        -a---          12/20/2022  7:24 PM              0 db.sqlite3
-        -a---          12/20/2022  7:17 PM            684 manage.py
-        -a---          12/20/2022  7:05 PM            156 Pipfile
-        -a---          12/20/2022  7:05 PM           1775 Pipfile.lock
-        -a---          12/20/2022  6:56 PM            292 README.md
+        -a---          12/21/2022  6:59 AM              0 db.sqlite3
+        -a---          12/21/2022  6:56 AM            684 manage.py
+        -a---          12/21/2022  6:50 AM            156 Pipfile
+        -a---          12/21/2022  6:50 AM           1775 Pipfile.lock
+        -a---          12/21/2022  6:26 AM            169 README.md
 
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator>
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
 
 1. Activate virtual environment:
@@ -42,10 +42,10 @@
     * Sample console output:
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator> pipenv shell
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> pipenv shell
         Launching subshell in virtual environment...
         PowerShell 7.3.1
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator>
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
 
 1. Verify `docutils` is not yet installed:
@@ -53,7 +53,7 @@
     * Sample console output:
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator> pip list
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> pip list
         Package    Version
         ---------- -------
         asgiref    3.6.0
@@ -63,7 +63,7 @@
         sqlparse   0.4.3
         tzdata     2022.7
         wheel      0.38.4
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator>
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
 
 1. Install 'docutils' so we can use Django Admin Documentation:
@@ -71,14 +71,14 @@
     * Sample console output:
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator> pipenv install docutils==0.19
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> pipenv install docutils==0.19
         Installing docutils==0.19...
         Pipfile.lock (c21913) out of date, updating to (c92a4c)...
         Locking [packages] dependencies...
         Locking [dev-packages] dependencies...
         Updated Pipfile.lock (ad87035279ad7566fef0860964cc374ccfb9336924ab64f936c86c7a98c92a4c)!
         Installing dependencies from Pipfile.lock (c92a4c)...
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator>
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
 
 1. Verify `docutils` is installed. Note line with '`docutils`':
@@ -86,7 +86,7 @@
     * Sample console output:
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator> pip list
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> pip list
         Package    Version
         ---------- -------
         asgiref    3.6.0
@@ -97,7 +97,7 @@
         sqlparse   0.4.3
         tzdata     2022.7
         wheel      0.38.4
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator>
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
 
 1. Add `django.contrib`'s `admindocs` app to `INSTALLED_APPS` list in [`config/settings.py`](../config/settings.py):
@@ -138,7 +138,7 @@
     * `python manage.py migrate`
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator> python manage.py migrate
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> python manage.py migrate
         Operations to perform:
           Apply all migrations: admin, auth, contenttypes, sessions
         Running migrations:
@@ -160,7 +160,7 @@
           Applying auth.0011_update_proxy_permissions... OK
           Applying auth.0012_alter_user_first_name_max_length... OK
           Applying sessions.0001_initial... OK
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator>
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
 
 1. Create a superuser so we can log into Django Admin Interface and access Django Admin Documentation:
@@ -178,13 +178,13 @@
     * `python manage.py createsuperuser --email admin@email.app --username admin`
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator> python manage.py createsuperuser --email admin@email.app --username admin
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> python manage.py createsuperuser --email admin@email.app --username admin
         Password:
         Password (again):
         This password is too common.
         Bypass password validation and create user anyway? [y/N]: y
         Superuser created successfully.
-        PS C:\Users\FlynntKnapp\Programming\django-admin-documentation-generator>
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
 
 1. Start the development server:
@@ -292,7 +292,7 @@
         ![Django Admin Documentation Page: Link](../images/django-admin-doc-link.png)
     * Sample browser image:
         ![Django Admin Documentation Page](../images/django-admin-doc.png)
-    * Note the URL:
+    * Note the current URL:
         * <http://localhost:8000/admin/doc/>
     * Sample console output:
 
@@ -303,7 +303,7 @@
 1. Explore the links provided by the [`Models`](http://localhost:8000/admin/doc/models/) link:
     * Sample browser image:
         ![Django Admin Interface](../images/django-admin-doc-models.png)
-    * Note the URL:
+    * Note the current URL:
         * <http://localhost:8000/admin/doc/models/>
     * Sample console output:
 
@@ -314,6 +314,8 @@
 1. Explore the link for the [`User`](http://localhost:8000/admin/doc/models/auth.user/) model of the `Authentication and Authorization (django.contrib.auth)` application:
     * Sample browser image:
         ![Django Admin Interface](../images/django-admin-doc-models-auth-user-link.png)
+    * Note the current URL:
+        * <http://localhost:8000/admin/doc/models/auth.user/>
     * Sample console output:
 
         ```console
