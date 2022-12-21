@@ -105,6 +105,9 @@
         {% if user.is_authenticated %}
             <p>You are logged in, and you're: <code>{{ user }}</code></p>
             <p><a href="{% url 'logout' %}">Log Out</a></p>
+            {% if user.is_superuser %}
+                <p><a href="{% url 'admin:index' %}">Django Admin Interface</a></p>
+            {% endif %}
         {% else %}
             <p>You are not logged in, so you're: <code>{{ user }}</code></p>
             <p><a href={% url 'login' %}>Log In</a></p>
