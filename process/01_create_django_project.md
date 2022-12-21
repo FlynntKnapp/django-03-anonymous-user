@@ -239,5 +239,5 @@
 
 ## Repository Links
 
-* [Django Admin Documentation Generator](../)
-* [Django Admin Documentation Generator - `README.md`](../README.md)
+* [django-03-anonymous-user](https://github.com/FlynntKnapp/django-03-anonymous-user)
+* [django-03-anonymous-user - `README.md`](https://github.com/FlynntKnapp/django-03-anonymous-user/blob/main/README.md)
