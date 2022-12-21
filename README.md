@@ -7,7 +7,7 @@
 
 ## Functional Code Example Repository
 
-* <https://github.com/FlynntKnapp/django-admin-documentation-generator>
+* <https://github.com/FlynntKnapp/django-anonymous-user>
 
 ## External Resources
 
