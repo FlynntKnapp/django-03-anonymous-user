@@ -104,10 +104,10 @@
         <h2><code>user</code> Login Status</h2>
         {% if user.is_authenticated %}
             <p>You are logged in, and you're: <code>{{ user }}</code></p>
-            <p><a href="{% url 'logout' %}">Log Out</a></p>
-            {% if user.is_superuser %}
-                <p><a href="{% url 'admin:index' %}">Django Admin Interface</a></p>
+            {% if user.is_staff %}
+                <a href="{% url 'admin:index' %}">Django Admin Interface</a>
             {% endif %}
+            <p><a href="{% url 'logout' %}">Log Out</a></p>
         {% else %}
             <p>You are not logged in, so you're: <code>{{ user }}</code></p>
             <p><a href={% url 'login' %}>Log In</a></p>
@@ -139,6 +139,8 @@
             <dd>{{ user.is_anonymous }}</dd>
             <dt><code>user.is_authenticated</code></dt>
             <dd>{{ user.is_authenticated }}</dd>
+            <dt><code>user.is_staff</code></dt>
+            <dd>{{ user.is_staff }}</dd>
             <dt><code>user</code></dt>
             <dd>{{ user }}</dd>
             <dt><code>user.username</code></dt>

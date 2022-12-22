@@ -6,6 +6,6 @@
 
   ![AnonymousUser object](../images/anonymoususer.png)
 
-* Home page view for `User` object which has `is_authenticated` set to `True` and `is_superuser` set to `True`:
+* Home page view for `User` object which has `is_authenticated` set to `True` and `is_staff` set to `True`:
 
-  ![User object which has is_authenticated set to True and is_superuser set to True](../images/user_is_authenticated_and_is_superuser.png)
+  ![User object which has is_authenticated set to True and is_staff set to True](../images/user_is_authenticated_and_is_staff.png)
