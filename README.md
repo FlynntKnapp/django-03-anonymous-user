@@ -4,6 +4,8 @@
 
 1. [Create Django Project](./process/01_create_django_project.md)
 1. [Add Django AdminDocs (`django.contrib.admindocs`) Application](./process/02_add_django_admindocs.md)
+1. [Add User Login and Logout](./process/03_add_user_login_and_logout.md)
+1. [Explore User Attributes and URL Routes](./process/04_explore_user_attributes_and_url_routes.md)
 
 ## Functional Code Example Repository
 
