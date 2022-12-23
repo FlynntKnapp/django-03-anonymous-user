@@ -188,4 +188,4 @@
     LOGOUT_REDIRECT_URL = 'home'
     ```
 
-1. Proceed to [Explore User Attributes and URL Routes](./03_explore_user_attributes_and_url_routes.md) to explore properties of the `AnonymousUser` object and investigate URL routes for actions.
+1. Proceed to [Explore User Attributes and URL Routes](./04_explore_user_attributes_and_url_routes.md) to explore properties of the `AnonymousUser` object and investigate URL routes for actions.
