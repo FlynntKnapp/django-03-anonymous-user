@@ -171,18 +171,12 @@
 
     IMPORTANT: Never use weak passwords for an application in production.
 
-    IMPORTANT: We are only using `admin` here since the database is on our development system and will not contain actual data from the application.
-
-    IMPORTANT: We are only using a weak password here since the database is on our development system and will not contain actual data from the application.
-
-    * `python manage.py createsuperuser --email admin@email.app --username admin`
+    * `python manage.py createsuperuser --email FlynntKnapp@email.app --username FlynntKnapp`
 
         ```console
-        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> python manage.py createsuperuser --email admin@email.app --username admin
-        Password:
-        Password (again):
-        This password is too common.
-        Bypass password validation and create user anyway? [y/N]: y
+        PS C:\Users\FlynntKnapp\Programming\django-anonymous-user> python manage.py createsuperuser --email FlynntKnapp@email.app --username FlynntKnapp
+        Password: 
+        Password (again): 
         Superuser created successfully.
         PS C:\Users\FlynntKnapp\Programming\django-anonymous-user>
         ```
@@ -260,10 +254,10 @@
 
 1. If there is already a `User`, there should be, the `User` account you are using right now.
     * There is probably a `User` account (if you used the provided `createsuperuser` command above) with the following attributes:
-        * Username: `admin`
-        * Email address: `admin@email.app`
+        * Username: `FlynntKnapp`
+        * Email address: `FlynntKnapp@email.app`
         * ID: `1`
-    * Click the link for the `User` account '`admin`' you are using right now.
+    * Click the link for the `User` account '`FlynntKnapp`' you are using right now.
         * Note the URL to view this user account. This is a common pattern in Django list, detail, and change views:
             * <http://localhost:8000/admin/auth/user/1/change/>
         * Sample browser image:
